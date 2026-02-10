@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Introduction
 
-In this tutorial, you will learn how to: hihihihihi
+In this tutorial, you will learn how to:
 
 * Use dictionary-based techniques to analyze text
 * Use common sentiment dictionaries
