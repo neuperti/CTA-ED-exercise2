@@ -158,7 +158,7 @@ What do we see here. First, the `AFINN` lexicon gives words a score from -5 to +
 Let's see how we might filter the texts by selecting a dictionary, or subset of a dictionary, and using `inner_join()` to then filter out tweet data. We might, for example, be interested in fear words. Maybe, we might hypothesize, there is a uptick of fear toward the beginning of the coronavirus outbreak. First, let's have a look at the words in our tweet data that the `nrc` lexicon codes as fear-related words.
 
 ```{r}
-
+# get fear related words
 nrc_fear <- get_sentiments("nrc") %>% 
   filter(sentiment == "fear")
 
@@ -263,6 +263,7 @@ mordict
 We could then use the same technique as above to bind these with our data and look at the incidence of such words over time. Combining the sequence of scripts from above we would do the following:
 
 ```{r}
+# counts only
 tidy_tweets %>%
   inner_join(mordict) %>%
   group_by(date, index = order %/% 1000) %>% 
@@ -281,6 +282,8 @@ An alternative, and preferable, method here would simply take a character string
 After this, we join with our data frame of total words for each date. Note that here we are using `full_join()` as we want to include dates that appear in the "totals" data frame that do not appear when we filter for mortality words; i.e., days when mortality words are equal to 0. We then go about plotting as before.
 
 ```{r}
+# calculate in percentage
+
 mordict <- c('death', 'illness', 'hospital', 'life', 'health',
              'fatality', 'morbidity', 'deadly', 'dead', 'victim')
 
