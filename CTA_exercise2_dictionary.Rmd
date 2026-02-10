@@ -1,7 +1,7 @@
 ---
 title: "CTA-ED Exercise 2: dictionary-based methods"
-author: "Marion Lieutaud"
-date: "2/14/2024"
+author: "Xuhaonan Wang, Ai Zhang, Luca Neuperti"
+date: "2/10/2025"
 output: html_document
 ---
 
