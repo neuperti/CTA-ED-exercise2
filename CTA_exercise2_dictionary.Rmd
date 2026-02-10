@@ -78,7 +78,7 @@ saveRDS(tweets, "data/sentanalysis/newstweets.rds")
 
 You can download the tweets data directly from the source in the following way: the data was collected by Chris Barrie and is stored on his Github page.
 
-```{r, eval = F}
+```{r}
 tweets  <- readRDS(gzcon(url("https://github.com/cjbarrie/CTA-ED/blob/main/data/sentanalysis/newstweets.rds?raw=true")))
 ```
 
@@ -496,7 +496,7 @@ dfm_dict_trans <- toks_news %>%
   full_join(totals_newspaper, word, by="newspaper")
   
 # then just tweak the same code as before
-tidy_dfm_trans <- dfm_trans %>% 
+tidy_dfm_trans <- dfm_dict_trans %>% 
   dfm_group(groups = newspaper) %>% # we group by newspaper
   convert(to = "data.frame") %>% # convert it to a dataframe
   rename("newspaper" = doc_id) # rename variable
