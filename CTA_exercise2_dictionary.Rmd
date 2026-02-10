@@ -335,7 +335,7 @@ data_dictionary_LSD2015_pos_neg <- data_dictionary_LSD2015[1:2]
 toks_news_lsd <- tokens_lookup(toks_news, dictionary = data_dictionary_LSD2015_pos_neg)
 ```
 
-This creates a long list of all the texts (tweets) annotated with a series of 'positive' or 'negative' annotations depending on the valence of the words in that text. The creators of `quanteda` then recommend we generate a document feature matric from this. Grouping by date, we then get a dfm object, which is a quite convoluted list object that we can plot using base graphics functions for plotting matrices.
+This creates a long list of all the texts (tweets) annotated with a series of 'positive' or 'negative' annotations depending on the valence of the words in that text. The creators of `quanteda` then recommend we generate a document feature matrix from this. Grouping by date, we then get a dfm object, which is a quite convoluted list object that we can plot using base graphics functions for plotting matrices.
 
 ```{r}
 # create a document document-feature matrix and group it by date
@@ -530,3 +530,5 @@ tidy_tweets %>%
 3. Apply the Lexicoder Sentiment Dictionary to the news tweets, but break down the analysis by newspaper
 4. Don't forget to 'knit' to produce your final html output for the exercise.
 
+SOLUTIONS
+This sheet seems to already contain the solutions to exercises 1-3. 
