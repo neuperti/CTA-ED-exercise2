@@ -78,7 +78,7 @@ saveRDS(tweets, "data/sentanalysis/newstweets.rds")
 
 You can download the tweets data directly from the source in the following way: the data was collected by Chris Barrie and is stored on his Github page.
 
-```{r, eval = F}
+```{r}
 tweets  <- readRDS(gzcon(url("https://github.com/cjbarrie/CTA-ED/blob/main/data/sentanalysis/newstweets.rds?raw=true")))
 ```
 
