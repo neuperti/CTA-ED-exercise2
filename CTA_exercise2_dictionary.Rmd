@@ -496,7 +496,7 @@ dfm_dict_trans <- toks_news %>%
   full_join(totals_newspaper, word, by="newspaper")
   
 # then just tweak the same code as before
-tidy_dfm_trans <- dfm_trans %>% 
+tidy_dfm_trans <- dfm_dict_trans %>% 
   dfm_group(groups = newspaper) %>% # we group by newspaper
   convert(to = "data.frame") %>% # convert it to a dataframe
   rename("newspaper" = doc_id) # rename variable
